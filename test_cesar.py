@@ -1,9 +1,9 @@
 import unittest
 from vigenere import cesar
 
-class TestTaxes(unittest.TestCase):
+class TestCesar(unittest.TestCase):
 
-    def test_taxes(self):
+    def test_cesar(self):
         expected = [
                 ('=', 'C', True, '='),
                 ('A', 'C', True, 'D'),
