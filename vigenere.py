@@ -15,6 +15,7 @@ def cesar(clear, key, encode=True):
     """
     return None
 
+
 def vigenere(clear, key, encode=True):
     """
     retourne l'encodage de Vigenère du message <clear> par la clef <key>
