@@ -1,11 +1,12 @@
 import unittest
 from taxes import taxes
+from testing_utils import BaseTestCase
 
 
-class TestTaxes(unittest.TestCase):
+class TestTaxes(BaseTestCase):
 
     def test_taxes(self):
-        expected = [
+        test_cases = [
             (0, 0),
             (50000, 7500),
             (12500, 0),
@@ -17,17 +18,14 @@ class TestTaxes(unittest.TestCase):
             (200000, 70000),
             (12504, 0)
         ]
-        errors = 0
-        for income, tax in expected:
-            if taxes(income) == tax:
-                print(f"OK    : income {income} -> tax {tax}")
-            else:
-                print(
-                    f"ERROR : income {income} -> should be {tax}, but was {taxes(income)}")
-                errors += 1
+        self.run_tests(test_cases, taxes)
 
-        if errors:
-            self.fail(f"{errors} errors / {len(expected)} total")
+    def ok_message(self, args, expected):
+        print(f"OK    : income {args[0]} -> tax {expected}")
+
+    def error_message(self, args, expected, result):
+        print(
+            f"ERROR : income {args[0]} -> should be {expected}, but was {result}")
 
 
 if __name__ == '__main__':

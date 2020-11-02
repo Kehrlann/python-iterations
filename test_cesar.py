@@ -1,11 +1,12 @@
 import unittest
 from vigenere import cesar
+from testing_utils import BaseTestCase
 
 
-class TestCesar(unittest.TestCase):
+class TestCesar(BaseTestCase):
 
     def test_cesar(self):
-        expected = [
+        test_cases = [
             ('=', 'C', True, '='),
             ('A', 'C', True, 'D'),
             ('a', 'C', True, 'd'),
@@ -44,8 +45,20 @@ class TestCesar(unittest.TestCase):
             ('z', 'x', True, 'x'),
             ('z', 'x', False, 'b')
         ]
-        for *args, result in expected:
-            self.assertEqual(cesar(*args), result)
+
+        self.run_tests(test_cases, cesar)
+
+    def ok_message(self, args, expected):
+        decode_encode = "encoding" if args[2] else "decoding"
+        print(
+            f"OK    : {decode_encode} \"{args[0]}\" with key \"{args[1]}\", "
+            f"result is \"{expected}\"")
+
+    def error_message(self, args, expected, result):
+        decode_encode = "encoding" if args[2] else "decoding"
+        print(
+            f"ERROR : {decode_encode} \"{args[0]}\" with key \"{args[1]}\", "
+            f"result should be \"{expected}\" but was \"{result}\"")
 
 
 if __name__ == '__main__':
