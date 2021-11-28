@@ -1,0 +1,74 @@
+{
+  "tests": [
+    {
+      "name": "taxes",
+      "setup": "",
+      "run": "python3 -m unittest test_taxes",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "compréhensions: aplatir",
+      "setup": "",
+      "run": "python3 -m unittest test_aplatir",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "compréhensions: alternat",
+      "setup": "",
+      "run": "python3 -m unittest test_alternat",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "compréhensions: intersect",
+      "setup": "",
+      "run": "python3 -m unittest test_intersect",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Vigenère: cesar",
+      "setup": "",
+      "run": "python3 -m unittest test_cesar",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "Vigenère: vigenere",
+      "setup": "",
+      "run": "python3 -m unittest test_vigenere",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "digits",
+      "setup": "",
+      "run": "python3 -m unittest test_digits",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    }
+  ]
+}
