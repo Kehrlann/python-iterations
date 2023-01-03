@@ -133,20 +133,12 @@ On vous demande d'écrire une fonction `intersect` qui retourne l'ensemble des o
 
 ```python
 >>> intersect(
-  { (8, 'huit'),
-    (10, 'dixA'),
-    (12, 'douze')},
-  { (5, 'cinq'),
-    (10, 'dixB'),
-    (15, 'quinze')})
+  { (8, 'huit'), (10, 'dixA'), (12, 'douze')},
+  { (5, 'cinq'), (10, 'dixB'), (15, 'quinze')})
 {'dixB', 'dixA'}
 >>> intersect(
-  { (1, 'unA'),
-    (2, 'deux'),
-    (3, 'troisA')},
-  { (1, 'unB'),
-    (2, 'deux'),
-    (4, 'quatreB')})
+  { (1, 'unA'), (2, 'deux'), (3, 'troisA')},
+  { (1, 'unB'), (2, 'deux'), (4, 'quatreB')})
 {'unA', 'deux', 'unB'}
 ```
 
@@ -315,14 +307,9 @@ cesar('e', 'c') → 'h'
 Voyons cet exemple sous forme de code :
 
 ```python
->>> vigenere(
-  'ce message',
-  'cle')
+>>> vigenere( 'ce message', 'cle')
 'fq pqxvmlh'
->>> vigenere(
-  'fq pqxvmlh',
-  'CLE',
-  False)
+>>> vigenere( 'fq pqxvmlh', 'CLE', False)
 'ce message'
 ```
 
