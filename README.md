@@ -123,8 +123,6 @@ Il vous est demandé d'écrire une fonction `aplatir` qui prend *un unique* argu
 
 ### Intermédiaire - `intersect`
 
-+++
-
 On se donne deux ensembles A et B de tuples de la forme
 
 ```python
