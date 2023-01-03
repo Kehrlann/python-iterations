@@ -58,14 +58,12 @@ On se propose d'écrire une fonction `taxes` qui calcule le montant de l'impôt 
 
 Le barème est [publié ici par le gouvernement anglais](https://www.gov.uk/income-tax-rates), voici les données de 2020 qui sont utilisées pour l'exercice :
 
-```shell
 | Tranche             | Revenu imposable    | Taux  |
 |--------------------:|--------------------:|------:|
 | Non imposable       | jusque £12.500      | 0%    |
 | Taux de base        | £12.501 à £50.000   | 20%   |
 | Taux élevé          | £50.001 à £150.000  | 40%   |
 | Taux supplémentaire | au delà de £150.000	| 45%   |
-```
 
 Donc naturellement il s'agit d'écrire une fonction qui prend en argument le revenu imposable, et retourne le montant de l'impôt, **arrondi à l'entier inférieur**.
 
